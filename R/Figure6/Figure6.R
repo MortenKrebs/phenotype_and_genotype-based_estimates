@@ -72,7 +72,8 @@ acc_to_se <- function( acc, prev=0.2 , h2=.5 ) {
 
 
 ## PGS Stats
-data <- fread( paste0( figPath, "Stats_230122.txt" ) )[ 1:20,]
+figPath <- "~/"
+data <- fread("Stats.txt" )[ 1:20,]
 
 data$train_rg_test[ data$train_rg_test > 1 ] <- 1
 
