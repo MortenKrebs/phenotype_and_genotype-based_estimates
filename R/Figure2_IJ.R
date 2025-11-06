@@ -28,12 +28,12 @@ names(dt)[7:8] <- c("acc","sib_eq")
 library(ggplot2)
 
 ### plot the sib_eq for class2: 
-g2=ggplot(data=dt[h2==.7&prev==.01],aes(x=factor(V2),y=sib_eq,color=V1,group=V1))+geom_line()+geom_point()+ scale_y_continuous(limits = c(0,10.1))+ #scale_x_continuous(breaks=1:10)+
+g1=ggplot(data=dt[h2==.7&prev==.01],aes(x=factor(V2),y=sib_eq,color=V1,group=V1))+geom_line()+geom_point()+ scale_y_continuous(limits = c(0,10.1))+ #scale_x_continuous(breaks=1:10)+
   theme_bw()+labs(x=expression(N[rel]),y="Sibling equivalents",color="Relative(s)")
 
 g4=ggplot(data=dt[h2==.5&prev==.5],aes(x=factor(V2),y=sib_eq,color=V1,group=V1))+geom_line()+geom_point()+ scale_y_continuous(limits = c(0,10.1))+ #scale_x_continuous(breaks=1:10)+
   theme_bw()+labs(x=expression(N[rel]),y="Sibling equivalents",color="Relative(s)")
 
-g2 
+g1 
 g4 
 
